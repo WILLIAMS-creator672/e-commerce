@@ -1,0 +1,79 @@
+* {
+    font-family: Lora;
+    transition: all 0.4s ease;
+}
+
+.hero-image {
+    background-image: url(MEDIA/hero-one.png);
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bounce {
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    50% {
+        transform: translateY(-25px);
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+
+.form input {
+    outline: none;
+    border-radius: 5px;
+    box-shadow: inset 1px 2px 5px rgb(153, 149, 149);
+}
+
+.form input:focus {
+    box-shadow: inset 1px 2px 8px rgb(104, 102, 102);
+}
+
+.form i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+}
+
+.tel-inset {
+    box-shadow: inset 1px 2px 5px rgb(128, 125, 125);
+    border: none;
+}
+
+.shadow {
+    box-shadow: inset 1px 2px 10px #eca427;
+    border: none;
+}
+
+.active {
+    cursor: pointer;
+}
+
+/* .disabled {
+    background-color: white;
+    cursor: not-allowed;
+    opacity: 0.7;
+    border: none;
+    pointer-events: none;
+} */
+
+.hide{
+    display: none;
+}
