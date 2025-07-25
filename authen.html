@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BuyFy: Log in/Sign up</title>
-    <link rel="stylesheet" href="/src/output.css" />
+    <link rel="stylesheet" href="./src/output.css" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
@@ -24,37 +24,37 @@
             <!-- SIGN UP FORM -->
 
             <form action="" method="post" id="signupForm"
-                class="form center shadow bg-neutral-100 border-[1px] w-fit px-[5px] md:px-[50px] py-[15px] gap-[20px] flex flex-col items-center rounded-[10px]">
+                class="form center shadow bg-neutral-100 border-[1px] w-fit gap-[20px] p-[10px] md:p-[40px] flex flex-col items-center rounded-[10px]">
 
-                <h1 class="text-[30px] text-amber-500 text-center font-bold">Create an account!</h1>
+                <h1 class="text-[20px] md:text-[30px] text-amber-500 text-center font-bold">Create an account!</h1>
 
                 <div class="flex flex-col">
                     <input type="text" placeholder="First Name" name="firstName" id="firstName"
-                        class="p-[10px] pr-[150px] md:pr-[200px]">
+                        class="p-[10px] pr-[130px] md:pr-[200px]">
                 </div>
 
                 <div class="flex flex-col">
                     <input type="text" placeholder="Last Name" name="lastName" id="lastName"
-                        class="p-[10px] pr-[150px] md:pr-[200px]">
+                        class="p-[10px] pr-[130px] md:pr-[200px]">
                 </div>
 
                 <div class="flex flex-col">
-                    <input type="text" placeholder="name@gmail.com" name="email" id="email" class="p-[10px] pr-[150px] md:pr-[200px]">
+                    <input type="text" placeholder="name@gmail.com" name="email" id="email" class="p-[10px] pr-[130px] md:pr-[200px]">
                 </div>
 
-                <div>
+                <!-- <div>
                     <div class="tel-inset flex border-[1px] w-fit rounded-[5px]">
                         <select class="flex justify-center items-center px-[1px] cursor-pointer outline-none text-[10px] md:text-[15px]">
                             <option value="" class="">+234</option>
                         </select>
                         <input type="text" placeholder="803xxxxx27" name="tel" id="tel" class=" p-[10px] pr-[100px] md:pr-[150px]">
                     </div>
-                </div>
+                </div> -->
 
                 <div class="flex flex-col">
                     <div class="flex items-center">
                         <input type="password" placeholder="Create your password" name="password" id="password"
-                            class="p-[10px] pr-[150px] md:pr-[200px]">
+                            class="p-[10px] pr-[130px] md:pr-[200px]">
                         <div id="passwordToggle" class="relative cursor-pointer">
                             <i class="fa-solid fa-eye-slash"></i>
                         </div>
@@ -64,7 +64,7 @@
                 <div class="flex flex-col">
                     <div class="flex items-center">
                         <input type="password" placeholder="Confirm your password" name="confirmPassword"
-                            id="confirmPassworddd" class="p-[10px] pr-[150px] md:pr-[200px]">
+                            id="confirmPassworddd" class="p-[10px] pr-[130px] md:pr-[200px]">
                         <div id="confirmPasswordToggle" class="relative cursor-pointer">
                             <i class="fa-solid fa-eye-slash"></i>
                         </div>
@@ -73,11 +73,11 @@
 
                 <div>
                     <button type="submit" id="registerButton"
-                        class="disabled bg-amber-500 rounded-[50px] border-none p-[10px] text-[18px] w-[200px] md:w-[400px] text-white hover:bg-amber-600 ">Register</button>
+                        class="disabled bg-amber-500 rounded-[50px] border-none p-[10px] text-[18px] w-[300px] md:w-[400px] text-white hover:bg-amber-600 ">Register</button>
                 </div>
 
                 <div class="w-fit m-auto">
-                    <p class="text-[18px]">Already have an account? <a href=""
+                    <p class="text-[12px] md:text-[18px]">Already have an account? <a href=""
                             class="text-amber-500 hover:underline">Sign in here</a></p>
                 </div>
             </form>
@@ -88,32 +88,32 @@
 
         <section>
             <form action="" method="post" id="signinForm"
-                class="form center shadow bg-neutral-100 border-[1px] w-fit px-[50px] py-[15px] flex flex-col items-center  gap-[20px] rounded-[10px]">
+                class="form center shadow bg-neutral-100 border-[1px] w-fit px-[10px] md:px-[50px] py-[15px] flex flex-col items-center  gap-[20px] rounded-[10px]">
 
                 <div>
-                    <h1 class="text-[30px] text-amber-500 text-center font-bold">Welcome Back!</h1>
-                    <p>Sign in to continue to your account</p>
+                    <h1 class="text-[20px] md:text-[30px] text-amber-500 text-center font-bold">Welcome Back!</h1>
+                    <p class="text-[12px] md:text-[18px]">Sign in to continue to your account</p>
                 </div>
 
                 <div>
 
-                    <input type="text" placeholder="name@gmail.com" id="signinEmail" class="p-[10px] pr-[200px]">
+                    <input type="text" placeholder="name@gmail.com" id="signinEmail" class="p-[10px] pr-[130px] md:pr-[200px]">
                 </div>
 
                 <div>
                     <input type="password" placeholder="Enter your password" id="signinPassword"
-                        class="p-[10px] pr-[200px]">
+                        class="p-[10px] pr-[130px] md:pr-[200px]">
                 </div>
 
 
                 <div>
                     <button type="submit"
-                        class="bg-amber-500 rounded-[50px] border-none p-[10px] px-[160px] text-[18px] text-white cursor-pointer hover:bg-amber-600">Sign
+                        class="bg-amber-500 rounded-[50px] border-none p-[10px] w-[300px] text-[18px] text-white cursor-pointer hover:bg-amber-600">Sign
                         in</button>
                 </div>
 
                 <div class="w-fit m-auto">
-                    <p class="text-[18px]">Don't have an account? <a href="" class="text-amber-500 hover:underline">Sign
+                    <p class="text-[12px] md:text-[18px]">Don't have an account? <a href="" class="text-amber-500 hover:underline">Sign
                             up
                             here</a></p>
                 </div>
