@@ -40,11 +40,11 @@ let confirmPasswordToggle = document.getElementById('confirmPasswordToggle')
 let seeConfirmPassword = confirmPasswordToggle.querySelector('i')
 
 passwordToggle.addEventListener('click', () => {
-        const isPassword = passwordInput.type === 'password'
-        passwordInput.type = isPassword ? 'text' : 'password'
+    const isPassword = passwordInput.type === 'password'
+    passwordInput.type = isPassword ? 'text' : 'password'
 
-        seePassword.classList.toggle('fa-eye');
-        seePassword.classList.toggle('fa-eye-slash');
+    seePassword.classList.toggle('fa-eye');
+    seePassword.classList.toggle('fa-eye-slash');
 })
 
 confirmPasswordToggle.addEventListener('click', () => {
@@ -64,14 +64,13 @@ signupForm.addEventListener('input', function () {
     if (!firstNameInput.value.trim()) valid = false;
     if (!lastNameInput.value.trim()) valid = false;
     if (!emailInput.value.includes('@')) valid = false;
-    if (!telInput.value.match(/^\d+$/)) valid = false
     if (!passwordInput.value.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{4,}$/)) valid = false;
     if (confirmPasswordInput.value !== passwordInput.value) valid = false;
 
 
-    if (valid){
+    if (valid) {
         registerButton.classList.replace('disabled', 'active')
-    } else{
+    } else {
         registerButton.classList.add('disabled')
 
     }
@@ -80,20 +79,32 @@ signupForm.addEventListener('input', function () {
 signupForm.addEventListener('submit', (event) => {
     event.preventDefault()
 
-    registerButton.innerHTML = '....'
-
+    
     let firstName = firstNameInput.value
     let lastName = lastNameInput.value
     let fullName = firstName + ' ' + lastName
     let email = emailInput.value
-    let phoneNumber = telInput.value
     let password = passwordInput.value
+    
+    let userData = {
+        fullName: fullName,
+        email: email,
+        password: password
+    }
+    
+    localStorage.setItem('formData', JSON.stringify(userData))
+    
+    registerButton.innerHTML = 'Creating Account...'
 
+    setTimeout(() => {
+        registerButton.innerHTML = 'Please wait...'
+    }, 1500)
 
-    localStorage.setItem('saveFullName', fullName)
-    localStorage.setItem('saveEmail', email)
-    localStorage.setItem('savePhoneNumber', phoneNumber)
-    localStorage.setItem('savePassword', password)
-
+   setTimeout(() => {
+       window.location.href = 'dashboard.html'
+   }, 2500)
+  
 })
+
+
 

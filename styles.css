@@ -77,3 +77,23 @@
 .hide{
     display: none;
 }
+
+.animate {
+    display: inline-block;
+    animation: animate 2s infinite alternate ease-in-out;
+}
+
+@keyframes animate {
+    0% {
+        transform: skewY(0deg);
+    }
+
+    50% {
+        transform: skewY(10deg);
+        transform: translateX(10px);
+    }
+
+    100% {
+        transform: skewY(0deg);
+    }
+}
