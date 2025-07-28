@@ -70,9 +70,9 @@ signupForm.addEventListener('input', function () {
 
 
     if (valid){
-        // registerButton.classList.replace('disabled', 'active')
+        registerButton.classList.replace('disabled', 'active')
     } else{
-        // registerButton.classList.add('disabled')
+        registerButton.classList.add('disabled')
 
     }
 });
