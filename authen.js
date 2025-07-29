@@ -87,6 +87,8 @@ signupForm.addEventListener('submit', (event) => {
     let password = passwordInput.value
     
     let userData = {
+        firstName: firstName,
+        lastName: lastName,
         fullName: fullName,
         email: email,
         password: password
@@ -103,6 +105,11 @@ signupForm.addEventListener('submit', (event) => {
    setTimeout(() => {
        window.location.href = 'dashboard.html'
    }, 2500)
+
+   setTimeout(() => {
+       registerButton.innerHTML = 'Register'
+       
+   }, 3500);
   
 })
 
